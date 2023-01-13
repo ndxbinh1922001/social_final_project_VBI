@@ -3,7 +3,7 @@ import Share from "../share/Share";
 import "./feed.css";
 import { useContext, useState, useEffect } from "react";
 import axios from "axios";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
 
 export default function Feed({ username }) {
   const [posts, setPosts] = useState([]);

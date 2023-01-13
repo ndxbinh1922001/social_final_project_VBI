@@ -1,9 +1,8 @@
 import "./share.css";
 import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
 import { useContext, useRef, useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
 import axios from "axios";
-import { useSubstrateState } from "./substrate-lib";
 import { web3FromAddress } from "@polkadot/extension-dapp";
 
 export default function Share() {
@@ -11,9 +10,6 @@ export default function Share() {
   const { user } = useContext(AuthContext);
   const desc = useRef();
   const [file, setFile] = useState(null);
-  const { api, keyring } = useSubstrateState();
-  const accounts = keyring.getPairs();
-  console.log("accounts:", accounts);
 
   const submitHandler = async (e) => {
     e.preventDefault();

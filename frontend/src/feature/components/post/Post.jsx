@@ -4,7 +4,8 @@ import { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
+
 
 export default function Post({ post }) {
   const [like, setLike] = useState(post.likes.length);
